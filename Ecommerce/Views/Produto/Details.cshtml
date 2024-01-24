@@ -1,0 +1,23 @@
+@model Produto
+
+<div>
+    <a asp-area="" asp-controller="Produto" asp-action="Index" class="btn btn-secondary mb-3">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </a>
+</div>
+
+<div class="card">
+    <h2 class="card-header">Detalhes do Produto</h2>
+    <div class="card-body">
+        <h4 class="card-title">Id: @Model.Id</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">Nome</dt>
+            <dd class="col-sm-10">@Model.Nome</dd>
+
+            <dt class="col-sm-2">Preço</dt>
+            <dd class="col-sm-10">@Model.Preco.ToString("0.00")</dd>
+            <!-- Adicione outros campos conforme necessário -->
+        </dl>
+    </div>
+</div>
